@@ -5,11 +5,11 @@ import email
 from asana27 import asana
 
 
-asana_api = asana.AsanaAPI('98V2yZO0.ZuOc40xBAhbJ8k3N1qCWCjN', debug=True)
+asana_api = asana.AsanaAPI('id_asana_user', debug=True)
 
 # Login and Password Emeil
-username = 'grigoriy.tsarik@gmail.com'
-password = '123456-qwerty'
+username = 'your@mail.com'
+password = 'password'
 
 # Connect the gmail.com through imap4_ssl
 gmail = imaplib.IMAP4_SSL('imap.gmail.com', '993')
@@ -35,7 +35,7 @@ try:
             header = email.Header.decode_header(subject)[0]
             subject_asana = header[0]
 
-            if subject_asana == 'Top tips for selling your items on eBay':
+            if subject_asana == 'Subject message for to forwarding to Sasna':
                 # Get message body
                 msg_parts = [
                     (part.get_filename(), part.get_payload(decode=True))
